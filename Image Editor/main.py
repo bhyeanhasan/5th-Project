@@ -360,6 +360,7 @@ class FrontEnd:
         original_file_type = self.filename.split('.')[-1]
         filename = filedialog.asksaveasfilename()
         filename = filename + "." + original_file_type
+
         save_as_image = self.edited_image
         cv2.imwrite(filename, save_as_image)
         self.filename = filename

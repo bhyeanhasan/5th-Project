@@ -1,6 +1,6 @@
 import cv2
 from PIL import ImageTk, Image
-from tkinter import (ttk, Tk, Canvas, filedialog)
+from tkinter import (ttk, Tk, Canvas, filedialog, messagebox)
 
 
 class Design:
@@ -43,6 +43,7 @@ class Design:
         save_as_image = self.edited_image
         cv2.imwrite(filename, save_as_image)
         self.filename = filename
+        messagebox.showinfo(title="Done", message="Image Saved")
 
     def display_image(self, image=None):
         self.canvas.delete("all")
